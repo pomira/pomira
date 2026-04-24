@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // فتح الواتساب
         window.open(whatsappURL, '_blank');
-
+        window.close();
         // تنظيف السلة
         cart = [];
         nameInput.value = '';

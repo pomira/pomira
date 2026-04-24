@@ -126,46 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // رقم الواتساب بتاعك - غيّره هنا
         const whatsappNumber = '201099573145'; // ضع رقمك هنا بدون + أو 0
         const whatsappURL = `https://wa.me/2${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-// عند فتح السلة
-function openOrderModal() {
-  // جمع بيانات السلة
-  const cartItems = JSON.parse(localStorage.getItem('cart') || '[]');
-  let orderText = '🛒 الطلب الجديد:\n\n';
-  
-  cartItems.forEach(item => {
-    orderText += `📦 ${item.name}\n`;
-    orderText += `الكمية: ${item.quantity}\n`;
-    orderText += `السعر: ${item.price} ريال\n\n`;
-  });
-  
-  orderText += `الإجمالي: ${calculateTotal()} ريال`;
-  
-  document.getElementById('orderDetails').value = orderText;
-  new bootstrap.Modal(document.getElementById('orderModal')).show();
-}
 
-// عند الضغط على تأكيد
-document.getElementById('confirmOrder').addEventListener('click', function() {
-  const name = document.getElementById('customerName').value;
-  const phone = document.getElementById('customerPhone').value;
-  
-  if (!name || !phone) {
-    alert('يرجى ملء جميع البيانات');
-    return;
-  }
-  
-  // إرسال للواتساب
-  const cartItems = JSON.parse(localStorage.getItem('cart') || '[]');
-  const orderText = `👤 ${name}\n📱 ${phone}\n\n🛒 الطلب:\n${document.getElementById('orderDetails').value}`;
-  
-  const whatsappUrl = `https://wa.me/9665xxxxxxxx?text=${encodeURIComponent(orderText)}`;
-  window.open(whatsappUrl, '_blank');
-  
-  // إغلاق الـ Modal وتفريغ السلة
-  bootstrap.Modal.getInstance(document.getElementById('orderModal')).hide();
-  localStorage.removeItem('cart');
-  alert('تم إرسال الطلب بنجاح! ✅');
-});
         // فتح الواتساب
         window.open(whatsappURL, '_self');
         window.close();
@@ -182,6 +143,11 @@ document.getElementById('confirmOrder').addEventListener('click', function() {
         alert(`✅ تم إرسال الطلب بنجاح!\n💰 المجموع: ${totalAmount} ج.م\n📱 تحقق من الواتساب`);
     });
 
+    // عند الضغط على تأكيد
+document.getElementById('confirmOrder').addEventListener('click', function() {
+  const name = document.getElementById('customerName').value;
+  const phone = document.getElementById('customerPhone').value;
+  
     // تحديث عداد السلة
     function updateCartCount() {
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);

@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const whatsappURL = `https://wa.me/2${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
         // فتح الواتساب
-        window.open(whatsappURL, '_blank');
+        window.open(whatsappURL, '_self');
         window.close();
         // تنظيف السلة
         cart = [];

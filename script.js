@@ -126,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // رقم الواتساب بتاعك - غيّره هنا
         const whatsappNumber = '201099573145'; // ضع رقمك هنا بدون + أو 0
         const whatsappURL = `https://wa.me/2${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+console.logwhatsapp
 
         // فتح الواتساب
         window.open(whatsappURL, '_self');
@@ -143,11 +144,6 @@ document.addEventListener('DOMContentLoaded', function() {
         alert(`✅ تم إرسال الطلب بنجاح!\n💰 المجموع: ${totalAmount} ج.م\n📱 تحقق من الواتساب`);
     });
 
-    // عند الضغط على تأكيد
-document.getElementById('confirmOrder').addEventListener('click', function() {
-  const name = document.getElementById('customerName').value;
-  const phone = document.getElementById('customerPhone').value;
-  
     // تحديث عداد السلة
     function updateCartCount() {
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);

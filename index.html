@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Splash</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Body Splash</h1>
+            <div class="cart-icon" id="cartIcon">
+                <span>🛒</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    <div >
+        <img src="lpgo pomria.jpg" class="center-img" alt="logo">
+    </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>pomira</h2>
+            <p>جودة عالمية - توصيل سريع لكل مكان</p>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container">
+            <div class="products-grid">
+                <div class="product" data-name="Flora Veil" data-price="199">
+                    <div class="product-img">
+                        <img src="Flora Veil  .jpg" alt="Flora Veil">
+                    </div>
+                    <div class="product-info">
+                        <h3>Flora Veil</h3>
+                        <div class="price">
+                            <span class="old">225 ج.م</span>
+                            <span class="new">199 ج.م</span>
+                        </div>
+                        <button class="add-cart">أضف للسلة</button>
+                    </div>
+                </div>
+
+                <div class="product" data-name="luna Glow" data-price="199">
+                    <div class="product-img">
+                        <img src="Luna Glow.jpg" alt="luna glow">
+                    </div>
+                    <div class="product-info">
+                        <h3>luna Glow</h3>
+                        <div class="price">
+                            <span class="old">225 ج.م</span>
+                            <span class="new">199 ج.م</span>
+                        </div>
+                        <button class="add-cart">أضف للسلة</button>
+                    </div>
+                </div>
+
+                <div class="product" data-name="Vanilia Dream" data-price="199">
+                    <div class="product-img">
+                        <img src="Vanilia Dream.jpg" alt="Vanilia Dream">
+                    </div>
+                    <div class="product-info">
+                        <h3></h3>
+                        <div class="price">
+                            <span class="old">225 ج.م</span>
+                            <span class="new">199 ج.م</span>
+                        </div>
+                        <button class="add-cart">أضف للسلة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- سلة المشتريات -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🛒 سلة التسوق</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div id="cartItems" class="cart-items"></div>
+            
+            <div class="customer-data">
+                <h3>بيانات العميل</h3>
+                <input type="text" id="name" placeholder="الاسم الكامل">
+                <input type="tel" id="phone" placeholder="رقم الواتساب">
+                <input type="text" id="address" placeholder="العنوان">
+            
+            </div>
+            
+            <div class="total">
+                <h3>الإجمالي: <span id="totalPrice">0</span> ج.م</h3>
+            </div>
+            <button id="sendOrder" class="send-btn">📱 تأكيد وإرسال للواتساب</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

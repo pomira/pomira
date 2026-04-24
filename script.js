@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
         whatsappMessage += `━━━━━━━━━━━━━━━━━━━━━`;
 
         // رقم الواتساب بتاعك - غيّره هنا
-        const whatsappNumber = '+201004872969'; // ضع رقمك هنا بدون + أو 0
+        const whatsappNumber = '201004872969'; // ضع رقمك هنا بدون + أو 0
         const whatsappURL = `https://wa.me/2${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
         // فتح الواتساب

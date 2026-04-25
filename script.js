@@ -59,7 +59,7 @@ function initCart() {
         msg += `\n*الإجمالي: ${sum}ج* 💰`;
 
         // رقمك - الواتساب يفتح عليك!
-        let yourNumber = '201099573145'; // غيّر برقمك!
+        let yourNumber = '201037353480'; // غيّر برقمك!
         window.open(`https://wa.me/${yourNumber}?text=${encodeURIComponent(msg)}`);
         
         // تنظيف

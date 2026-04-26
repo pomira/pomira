@@ -117,12 +117,12 @@ body {
 }
 
 .product-img {
-    height: 300px;
+    height: 350px;
     overflow: hidden;
 }
 
 .product-img img {
-    width: 100%;
+    width: 90%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s;
